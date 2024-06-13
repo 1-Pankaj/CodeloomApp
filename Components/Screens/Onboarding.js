@@ -18,7 +18,7 @@ const Onboarding = () => {
     return (
         <SafeAreaView style={[Stylesheet.Container, { justifyContent: 'space-around' }]}>
             <Codeloom />
-            <Pageone />
+            <Pagetwo />
             <AnimatedButtonView/>
         </SafeAreaView>
     )
