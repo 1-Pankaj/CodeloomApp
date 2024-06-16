@@ -23,6 +23,11 @@ const Stylesheet = StyleSheet.create({
         color: 'white',
         fontSize: 16,
         fontWeight: 'bold'
+    },
+    tab:{
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'transparent'
     }
 })
 

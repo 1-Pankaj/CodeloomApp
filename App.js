@@ -9,7 +9,8 @@ import { PaperProvider } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Stylesheet from './Components/StyleSheet/StyleSheet';
 import AnimatedButtonView from './Components/UIElements/AnimatedButton';
-
+import { ApplicationProvider } from '@ui-kitten/components';
+import * as eva from '@eva-design/eva';
 
 
 const Stack = createNativeStackNavigator();
@@ -17,12 +18,14 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <PaperProvider>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Onboarding" component={Onboarding} />
-          <Stack.Screen name="AnimatedButtonView" component={AnimatedButtonView} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <ApplicationProvider {...eva} theme={eva.light}>
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Onboarding" component={Onboarding} />
+            <Stack.Screen name="AnimatedButtonView" component={AnimatedButtonView} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </ApplicationProvider>
     </PaperProvider>
   );
 }
